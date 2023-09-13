@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body
+style="
+        background-image: url(blog.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      ">
+    <header>
+        <nav>
+            <img
+              src="logo.png"
+              alt="photo"
+              width="250px"
+              height="150px"
+              style="margin-right: 35%; margin-top: 2.5%"
+            />
+    
+            <div class="menu">
+              <a href="#" style="color: black">HOME</a>
+              <a href="#" style="color: black">ABOUT</a>
+              <a href="#" style="color: black">CONTACT</a>
+            </div>
+            <div class="register">
+              <a href="#">REGISTER</a>
+            </div>
+          </nav>
+    </header>
+    <div class="logo" style="color: black">VASH BLOG</div>
+    <main>
+        <section id="blog-form">
+            <h2>Create a New Post</h2>
+            <form>
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+                <label for="content">Content:</label>
+                <textarea id="content" required></textarea>
+                <button type="submit" style="padding: 10px; border-radius: 10px; font-size: 1em; background-color: indianred; color:white;">Publish</button>
+            </form>
+        </section>
+        <section id="blog-posts">
+            <h2>Blog Posts</h2>
+            <br/>
+            <br/>
+            <ul id="post-list"></ul>
+        </section>
+    </main>
+      <a href="file.html" class="open">OPEN BLOGS</a>
+    
+      <script src="pp.js"></script>
+    </body>
+    
+  </html>
+</DOCTYPE>
