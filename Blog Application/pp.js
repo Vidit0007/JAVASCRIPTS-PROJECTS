@@ -1,4 +1,19 @@
 // script.js
+function deleteBlogPost(index) {
+    // Retrieve existing posts from local storage
+    const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+    // Remove the post at the specified index
+    if (index >= 0 && index < posts.length) {
+        posts.splice(index, 1);
+    }
+
+    // Save the updated posts array to local storage
+    localStorage.setItem('blogPosts', JSON.stringify(posts));
+
+    // Display the updated posts
+    displayBlogPosts();
+}
 document.addEventListener('DOMContentLoaded', function () {
     const blogForm = document.querySelector('#blog-form form');
     const titleInput = document.querySelector('#title');
