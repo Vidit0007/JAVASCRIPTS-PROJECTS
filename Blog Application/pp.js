@@ -1,25 +1,40 @@
-// script.js
-function deleteBlogPost(index) {
-    // Retrieve existing posts from local storage
-    const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
-
-    // Remove the post at the specified index
-    if (index >= 0 && index < posts.length) {
-        posts.splice(index, 1);
-    }
-
-    // Save the updated posts array to local storage
-    localStorage.setItem('blogPosts', JSON.stringify(posts));
-
-    // Display the updated posts
-    displayBlogPosts();
-}
 document.addEventListener('DOMContentLoaded', function () {
     const blogForm = document.querySelector('#blog-form form');
     const titleInput = document.querySelector('#title');
     const contentInput = document.querySelector('#content');
     const postList = document.querySelector('#post-list');
- 
+  // script.js
+document.addEventListener('DOMContentLoaded', function () {
+    // ... (your existing code)
+    
+    // Save the entire HTML content of the body element to local storage
+    const saveToLocalStorage = () => {
+    const blogContent = document.body.innerHTML;
+    localStorage.setItem('blogContent', blogContent);
+    };
+    
+    // Load the content from local storage when the page loads
+    const loadFromLocalStorage = () => {
+    const storedBlogContent = localStorage.getItem('blogContent');
+    if (storedBlogContent) {
+        document.body.innerHTML = storedBlogContent;
+    }
+    };
+    
+    // Call the load function to load content on page load
+    loadFromLocalStorage();
+    
+    // ... (your existing code)
+    
+    // Add an event listener to save the content whenever the form is submitted
+    blogForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    // ... (your existing code)
+    
+    // After adding a new post, save the updated content to local storage
+    saveToLocalStorage();
+    });
+    });
     blogForm.addEventListener('submit', function (e) {
         e.preventDefault();
  
