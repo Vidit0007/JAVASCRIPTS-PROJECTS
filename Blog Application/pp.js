@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
  
         const postItem = document.createElement('li');
         postItem.innerHTML = `
-            <h3>${title}</h3><br/>
+            <h3 style="display:flex; align-item:center; witdth:100%; justify-content:flex-start; flex-wrap:nowrap ">${title}</h3><br/>
         
-            <p>${content}</p><br/>
+            <p style="display:flex; align-item:center; witdth:100%; justify-content:flex-start; flex-wrap:nowrap ">${content}</p><br/>
 
             <button class="edit-button" style="padding: 5px; border-radius: 10px; font-size: 1em; background-color: indianred; color:white;">Edit</button>
             <br/>

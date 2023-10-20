@@ -152,6 +152,7 @@ main {
 
 .blog-post p {
     margin-top: 10px;
+
 }
 
 .edit,
@@ -272,4 +273,10 @@ footer{
         text-align: center;
         margin: 10px;
     }
+} */
+/* #post-list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
 } */
